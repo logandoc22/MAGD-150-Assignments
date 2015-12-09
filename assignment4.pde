@@ -18,7 +18,7 @@ void draw() {
 
   //changes picutre back and forth, picture 2 is potato and picture 1 is old man
   if (state) {
-    img2 = loadImage ("Picture2.jpg");
+    img2 = loadImage ("https://cloud.githubusercontent.com/assets/14895970/11695361/5bf7a49a-9e74-11e5-847e-62ce4ee85a6a.jpg");
     image(img2, 440, 142, 860, 658);
     
      //frame
