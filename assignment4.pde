@@ -162,7 +162,7 @@ void draw() {
     text("Therefor, I am a potato", 200, 770);
     println (mouseX +"," + mouseY);
   } else {
-    img1 = loadImage ("Picture1.jpg");
+    img1 = loadImage ("https://cloud.githubusercontent.com/assets/14895970/11695262/e6d67650-9e73-11e5-86ee-2645f79d380a.jpg");
     image(img1, 440, 142, 860, 658);
 
     //frame
