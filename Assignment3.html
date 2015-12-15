@@ -7,201 +7,409 @@
 <script type="text/processing" data-processing-target="mycanvas1">
 
 
-
-int posX = 380;
-int posY = 178;
-float angle = 0.0;
-int x = 1;
-
 void setup() {
-  size(800, 600);
+  size(1280, 800);
+  background(255);
+  fill(255,0,0);
+ 
+  
 }
 void draw() {
-  println (mouseX +"," + mouseY);
-  
-  frameRate(20);
   background(30);
-  fill(50);
-  rect(0,270, 800,330);
-  fill(45);
+  fill(220); 
+  stroke(1);  
+  fill(210,105,30);
+  noStroke();
+    //planet
+   ellipse(800,400, 200,200);
  
+  
+//makes X and Y to follow the mouse.
+  int X= mouseX;
+  int Y=mouseY;
+  noStroke();
+  fill(0);
+//creates death star
+  ellipse(X, Y, 300, 300);
+  fill(220);
+  //white CUBES
+  rect(X+120, Y, 30, 10);
+  rect(X-150, Y, 30, 10);
+  fill(110);
+  stroke(0);
+  arc(X, Y+10, 300, 300, 0, PI);
+  arc(X, Y, 300, 300, PI, TWO_PI);
+
+  //TOP!!
+  fill(130);
+  rect(X, Y-20, 60, 20);
+  rect(X-100, Y-20, 50, 20);
+
+  beginShape();
+  vertex(X-130, Y-20);
+  vertex(X-130, Y);
+  vertex(X-150, Y);
+  vertex(X-149, Y-20);
+  endShape(CLOSE);
+  rect(X+110, Y-20, 30, 20);
+
+  beginShape();
+  vertex(X+60, Y-20);
+  vertex(X, Y-20);
+  vertex(X-3, Y-60);
+  vertex(X+40, Y-60);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X+125, Y-60);
+  vertex(X+138, Y-60);
+  vertex(X+148, Y-20);
+  vertex(X+130, Y-20);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X-77, Y-60);
+  vertex(X-127, Y-60);
+  vertex(X-130, Y-20);
+  vertex(X-80, Y-20);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X-34, Y-110);
+  vertex(X-94, Y-110);
+  vertex(X-126, Y-60);
+  vertex(X-36, Y-60);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X, Y-110);
+  vertex(X-3, Y-60);
+  vertex(X+124, Y-60);
+  vertex(X+107, Y-104);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X-15, Y-110);
+  vertex(X-12, Y-132);
+  vertex(X-60, Y-132);
+  vertex(X-63, Y-110);
+  endShape();
+
+  beginShape();
+  vertex(X-80, Y-110);
+  vertex(X-102, Y-110);
+  vertex(X-70, Y-132);
+  endShape(CLOSE);
+
+
+
+
+
+
+
+  //SPLIT
+
+  fill(190);
+  rect(X-50, Y-20, 50, 20);
+  rect(X-130, Y-20, 30, 20);
+  rect(X+60, Y-20, 50, 20);
+
+  beginShape();
+  vertex(X+139, Y-20);
+  vertex(X+149, Y-20);
+  vertex(X+150, Y);
+  vertex(X+140, Y);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X-80, Y-20);
+  vertex(X, Y-20);
+  vertex(X-3, Y-60);
+  vertex(X-77, Y-60);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X+125, Y-60);
+  vertex(X+60, Y-60);
+  vertex(X+60, Y-20);
+  vertex(X+130, Y-20);
+  endShape(CLOSE);
+
+  line(X+112, Y-60, X+116, Y-20);
+
+  beginShape();
+  vertex(X-130, Y-20);
+  vertex(X-149, Y-20);
+  vertex(X-138, Y-60);
+  vertex(X-128, Y-60);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X-37, Y-60);
+  vertex(X-3, Y-60);
+  vertex(X, Y-110);
+  vertex(X-34, Y-110);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X-137, Y-60);
+  vertex(X-126, Y-60);
+  vertex(X-94, Y-110);
+  vertex(X-104, Y-110);
+  endShape();
+
+  triangle(X+108, Y-105, X+116, Y-60, X+137, Y-60);
+
+  beginShape();
+  vertex(X-15, Y-110);
+  vertex(X+80, Y-110);
+  vertex(X+70, Y-132);
+  vertex(X-12, Y-132);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X-60, Y-132);
+  vertex(X-63, Y-110);
+  vertex(X-80, Y-110);
+  vertex(X-70, Y-132);
+  endShape(CLOSE);
+
+  fill(0);
+  rect(X-142, Y-45, 10, 5, 2);
+  rect(X-145, Y-35, 10, 5, 2);
+  rect(X-90, Y-90, 40, 5, 2);
+
+
+
+  
+stroke(0);
+  //noStroke();
+  fill(160);
+  ellipse(X+62, Y-68, 100, 100);
+  stroke(220);
+  ellipse(X+62, Y-68, 70, 70);
+  fill(100);
+  ellipse(X+60, Y-65, 25, 25);
+  fill(190);
+ 
+ 
+
+
+
+  stroke(0);
+  fill(190);
+
+
+  rect(X, Y+10, 60, 20);
+  fill(130);
+  rect(X-50, Y+10, 60, 20);
+  rect(X-100, Y+10, 60, 20);
+  rect(X+60, Y+10, 60, 20);
+
+  beginShape();
+  vertex(X-40, Y+30);
+  vertex(X+30, Y+30);
+  vertex(X+27, Y+80);
+  vertex(X-37, Y+80);
+  endShape();
+
+  fill(190);
+  beginShape();
+  vertex(X-40, Y+30);
+  vertex(X-37, Y+80);
+  vertex(X-67, Y+80);
+  vertex(X-70, Y+30);
+  endShape();
+
+  beginShape();
+  vertex(X-70, Y+30);
+  vertex(X-67, Y+80);
+  vertex(X-105, Y+80);
+  vertex(X-108, Y+30);
+  endShape();
+
+  beginShape();
+  vertex(X+62, Y+30);
+  vertex(X+30, Y+30);
+  vertex(X+27, Y+80);
+  vertex(X+59, Y+80);
+  endShape();
+
+  fill(130);
+  beginShape();
+  vertex(X+62, Y+30);
+  vertex(X+130, Y+30);
+  vertex(X+125, Y+80);
+  vertex(X+59, Y+80);
+  endShape();
+
+  fill(190);
+  beginShape();
+  vertex(X+77, Y+47);
+  vertex(X+114, Y+47);
+  vertex(X+111, Y+68);
+  vertex(X+74, Y+68);
+  vertex(X+77, Y+47);
+  endShape();
+
+  beginShape();
+  vertex(X+65, Y+80);
+  vertex(X+110, Y+80);
+  vertex(X+107, Y+110);
+  vertex(X+60, Y+110);
+  vertex(X+65, Y+80);
+  endShape();
+
+  beginShape();
+  vertex(X-70, Y+80);
+  vertex(X-43, Y+80);
+  vertex(X-40, Y+110);
+  vertex(X-67, Y+110);
+  endShape(CLOSE);
+
+  fill(130);
+  beginShape();
+  vertex(X-43, Y+80);
+  vertex(X+65, Y+80);
+  vertex(X+60, Y+110);
+  vertex(X-40, Y+110);
+  endShape(CLOSE);
+
+
+  beginShape();
+  vertex(X-133, Y+80);
+  vertex(X-112, Y+110);
+  vertex(X-95, Y+110);
+  vertex(X-114, Y+80);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X-112, Y+80);
+  vertex(X-95, Y+110);
+  vertex(X-66, Y+110);
+  vertex(X-69, Y+80);
+  endShape(CLOSE);
+
+  beginShape();
+  vertex(X+108, Y+80);
+  vertex(X+132, Y+80);
+  vertex(X+112, Y+110);
+  vertex(X+106, Y+110);
+  endShape(CLOSE);
+
+  fill(190);
+  beginShape();
+  vertex(X+112, Y+110);
+  vertex(X+33, Y+110);
+  vertex(X+30, Y+136);
+  vertex(X+82, Y+136);
+  endShape(CLOSE);
+
+  fill(0);
+  rect(X+50, Y+120, 40, 5, 2);
+  fill(130);
+  beginShape();
+  vertex(X+33, Y+110);
+  vertex(X+30, Y+136);
+  vertex(X-17, Y+136);
+  vertex(X-20, Y+110);
+  endShape(CLOSE);
+
+  fill(190);
+  beginShape();
+  vertex(X-17, Y+136);
+  vertex(X-20, Y+110);
+  vertex(X-70, Y+110);
+  vertex(X-54, Y+136);
+  endShape(CLOSE);
+
+  fill(130);
+  beginShape();
+  vertex(X-54, Y+136);
+  vertex(X-70, Y+110);
+  vertex(X-112, Y+110);
+  vertex(X-80, Y+136);
+  endShape(CLOSE);
+
+  line(X-22, Y+158, X-2, Y+136);
+  //TOP!
+
+
+  line(X+62, Y+30, X+59, Y+80);
+
+  line(X-150, Y+30, X+150, Y+30);
+
+
+  fill(0);
+  rect(X-30, Y+40, 50, 10, 2);
+
+//when mouse press, the lazers come up but only adds the final lazer if you are in line with the planet
   if (mousePressed) {
-    drawTorch();
-    writeText();
+    stroke(57, 255, 20);
+    strokeWeight(4);
+    line(X+12, Y-72, X+131, Y-82);
+    line(X+33, Y-28, X+131, Y-82);
+    line(X+49, Y-115, X+131, Y-82);
+    line(X+104, Y-90, X+131, Y-82);
+    line(X+104, Y-42, X+131, Y-82);
+    line(X+62,Y-66, X+131, Y-82);
+    
+    if( ( ( mouseX<=700 ) && ( mouseY > 300)  && (mouseY <500))){
+      
+    
+    line(X+131,Y-82,800, 400);
+    strokeWeight(1);
+    }
+    //creates when you press a key that blows up the planet
+    if(keyPressed) {
+      stroke(57, 255, 20);
+    strokeWeight(6);
+       line(X+12, Y-72, X+131, Y-82);
+    line(X+33, Y-28, X+131, Y-82);
+    line(X+49, Y-115, X+131, Y-82);
+    line(X+104, Y-90, X+131, Y-82);
+    line(X+104, Y-42, X+131, Y-82);
+    line(X+62,Y-66, X+131, Y-82);
+    line(X+131,Y-82,800, 400);
+      strokeWeight(1);
+      for(int x = 0; x<=.25; x++) {
+    stroke(210,105,10);
+    strokeWeight(30);
+   point(random(width),random(height)); 
+   strokeWeight(1);
+   fill(30);
+   stroke(30);
+   ellipse(800,400,250,250);
+   fill(255,255,0);
+   textSize(40);
+   text("Boom", 750, 400);
+   
+   
+     
+  }
   }
    
-   noStroke();
-  triangle(386, 374, 473, 185, 496, 374);
-  beginShape();
-   vertex(472, 185);
-   vertex(566, 207);
-  vertex(594, 252);
-   vertex(608, 275);
-  vertex(625, 327);
-  vertex(665, 355);
-  vertex(495, 374);
-   endShape();
-  strokeWeight(1);
-   stroke(0);
-    stroke(#E34D28);
-  line(486,188, 504, 214);
-  line(504, 214,548, 226);
- line( 548, 226,531, 265);
-  line(531, 265, 554, 282);
-  line(554, 282, 536, 341);
-  line(536, 341,570, 366);
-  line (570, 366,525, 600);
-  strokeWeight(5);
-  line(400, 600, 400, 575);
-  strokeWeight(1);
-   
-  stroke(#FFD700);
-  fill(#FF4500);
-  ellipse(400, 300, 200, 200);
-  strokeWeight(9);
-  stroke(#FFD700);
-  arc(400, 300, 200, 200, angle, angle+PI);
  
-  angle = angle + 0.1;
-  
-  dotsFlameRed();
-  dotsFlameLred();
-dotsFlameYellow();
-dotsFlameOrange();
-dotsFlameBlack();
-
-fill(0);
-strokeWeight(2);
-ellipse(400, 300, 40, 150);
-
-  drawLightningR();
-  drawLightningL();
-
   
   
+
+      
+  }
+//creates stars
+  for(int x = 0; x<=100; x++) {
+    stroke(255);
+    strokeWeight(2);
+   point(random(width),random(height)); 
+   strokeWeight(1);
+  }
  
-  noStroke();
-  fill(255,69,0, 90);
-triangle(447, 217,447,382,644,300);//right tri
-triangle(343, 217, 350, 382, 153, 300);//left tri
-fill(100);
-stroke(0);
-rect(300, 530, 200, 200);
-beginShape();
-vertex(167,300);//attached left of eye
-vertex(157, 175);
-vertex(127, 42);//left tip
-vertex(80,270);
-vertex(88,460);
-vertex(150, 554);
-vertex(400, 574);//bottom tip
-vertex(650, 554);
-vertex(712,460);
-vertex(725,270);
-vertex(688, 42);//right tip
-vertex(648, 175);
-vertex(638, 300);//attached right of eye
-vertex(600, 435);
-vertex(525, 448);
-vertex(400, 455);
-vertex(275, 448);
-vertex(200, 435);
-endShape(CLOSE);
+  println (mouseX +"," + mouseY);
 
-stroke(#E34D28);
-strokeWeight(5);
-  line(400, 600, 400, 575);
-  strokeWeight(1);
-  stroke(0);
-  drawRing();
 }
 
-void keyPressed() {
-  randomize();
-  drawEmb();
-}
-void randomize() {
-  posX = posX + round(random(0, 10));
-  posY = posY + round(random(0, 10));
-}
-void drawEmb() {
-  fill(227, 77, 40);
-  ellipse(random(378, 464), random(160, 193), 10, 10);
-}
-void drawLava() {
-  fill(227, 77, 40);
-  ellipse(posX, posY, 15, 15);
-}
+    Status API Training Shop Blog About Pricing 
 
-void dotsFlameRed(){
-float a = random(325, 475);
-float b = random(240, 360);
-stroke(#8B0000);
-ellipse(a,b, 15, 1);
-}
-void dotsFlameLred(){
-float a = random(325, 475);
-float b = random(240, 360);
-stroke(#B22222);
-ellipse(a,b, 15, 1);
-}
-void dotsFlameYellow(){
-float a = random(325, 475);
-float b = random(240, 360);
-stroke(#DAA520);
-ellipse(a,b, 15, 1);
-}
-void dotsFlameOrange(){
-float a = random(325, 475);
-float b = random(240, 360);
-stroke(#FF8C00);
-ellipse(a,b, 15, 1);
-}
-void dotsFlameBlack(){
-float a = random(325, 475);
-float b = random(240, 360);
-stroke(0);
-ellipse(a,b, 15, 1);
-}
-void drawLightningR(){
-  float a = random(500, 530);
-float b = random(250, 345);
-float c = random(600,620);
-float d = random(292,309);
-stroke( #FFC128);
-line(c, d, a, b);
-}
-void drawLightningL(){
-float a = random(270, 310);
-float b = random(250, 345);
-float c = random(187,217);
-float d = random(292,309);
-stroke( #FFC128);
-line(c, d, a, b);
-}
-void drawTorch() {
-for(int z = 0; z < 50; z++) {
-stroke(#E0820E);
-strokeWeight(5);
-point(random(width), random(382, 593));
-strokeWeight(1);
-}
-}
-void drawRing(){
-noFill();
-strokeWeight(4);
- stroke(#FFD700);
-ellipse(mouseX, mouseY, 20, 20);
-
-stroke(0);
-strokeWeight(1);
-} 
-void writeText(){
-  fill(#FFD700);
-  textSize(42);
-  text("Summon the Armies of Sauron!",100, 35);
-  fill(45);
-}
+    © 2015 GitHub, Inc. Terms Privacy Security 
 
 
 
