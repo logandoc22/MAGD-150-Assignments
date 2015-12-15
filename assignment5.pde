@@ -15,7 +15,7 @@ int legUP = 0;
 
 void setup() {
   size(800, 600);
-  img = loadImage("soccerball.png");
+  img = loadImage("https://cloud.githubusercontent.com/assets/14895970/11816544/7d8adec8-a316-11e5-9082-8b7ef9fcbbd7.png");
 }
 
 void draw() {
