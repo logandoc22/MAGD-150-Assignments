@@ -128,7 +128,7 @@ float X = 100;
 float Y = 100;
 
 void show() {
-  img = loadImage("shark.png");
+  img = loadImage("https://cloud.githubusercontent.com/assets/14895970/11817041/c1363922-a318-11e5-87ef-4465e014005a.png");
   imageMode(CENTER);
 image(img,X, Y,70, 70);
 }
