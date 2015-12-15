@@ -134,11 +134,11 @@ void setup() {
   myBna = new banana();
   myRanger = new ranger();
   
-  img =loadImage("bna.png");
-  img2 = loadImage("monkey.png");
-  img3= loadImage("ranger.png");
-  img4 = loadImage("plants2.png");
-  img5 = loadImage("snowy.png");
+  img =loadImage("https://cloud.githubusercontent.com/assets/14895970/11816833/e0b90c3a-a317-11e5-8b70-2d1e3cc582e0.png");
+  img2 = loadImage("https://cloud.githubusercontent.com/assets/14895970/11816829/d9adda92-a317-11e5-8c26-86d7d212ed78.png");
+  img3= loadImage("https://cloud.githubusercontent.com/assets/14895970/11816815/ca60f646-a317-11e5-86c8-7841716dd9f7.png");
+  img4 = loadImage("https://cloud.githubusercontent.com/assets/14895970/11816854/f217be0e-a317-11e5-8e5c-fecb3dae3935.png");
+  img5 = loadImage("https://cloud.githubusercontent.com/assets/14895970/11816822/d27d739a-a317-11e5-90ed-bd8e908c0722.png");
   
   myBna.randomize();
   
