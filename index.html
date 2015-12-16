@@ -21,7 +21,7 @@ PVector UR1;//upper right of play box
 PVector LR1;//lower right of play box
 int Z = 3;
 PImage img1;
-PImage img2;
+
 Timer myTimer;
 //import Sketches. FINAL.*;
 //SoundFile file;
@@ -33,8 +33,8 @@ void setup() {
   myTimer = new Timer();
   player1= new car(800, 600);//red car
 
-  img1 = loadImage("car.png");
-  img2 = loadImage("cop.png");
+  img1 = loadImage("https://cloud.githubusercontent.com/assets/14895970/11832871/cd004490-a382-11e5-8111-a314bb770efe.png");
+  
 
   frameRate(60);
   UL1 = new PVector(10, 50);//corners of stage square
@@ -236,15 +236,7 @@ class car {
     translate(-1*posX, -1*posY);
   }
 
-  void displayCop() {
-    translate(posX, posY);
-    rotate(angle);
-    image(img2, 0, 0, 80, 60);   //triangle(0, -20, 0, 20, 50, 0);
-    light();
-    headlight();
-    rotate(-1*angle);
-    translate(-1*posX, -1*posY);
-  }
+  
 
   void keyPressed() {
     if (key == 'w') {
@@ -321,21 +313,6 @@ class car {
   }
 
 
-  void light() {
-    colorMode(HSB);
-    if (x) {
-      fill(160, 255, 255);
-    } else {
-      fill(0, 255, 255);
-      if (frameCount % 5 == 0) {
-        x = !x;
-      } 
-      rect(0-2, 0, 6, 27);
-      ellipse(0-20, 0-10, 5, 5);
-      ellipse(0-20, 0 + 10, 5, 5);
-    }
-  }
-
   void displayHealth() {
     text("Health:" + health, 50, 50);
   }
@@ -351,7 +328,7 @@ class traffic {
     centerY = round(random(175, 525)) ;
     size = round(random(50, 100));
     carType = round(random(3));
-    img = loadImage("van.png");
+    img = loadImage("https://cloud.githubusercontent.com/assets/14895970/11832932/6e81b6fa-a383-11e5-9252-235c76c66c49.png");
   }
   void update() {// updates position of traffic
     centerY = centerY;
